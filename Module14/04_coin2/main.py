@@ -12,11 +12,11 @@ def check(number, id_point):
     return number
 
 
-def coinPlace(point_x, point_y):
+def coin_place(point_x, point_y):
     return math.sqrt(point_x ** 2 + point_y ** 2)
 
 
-def checkCoin(radius_search, radius_coin):
+def check_coin(radius_search, radius_coin):
     if radius_search >= radius_coin:
         print("Монетка где-то рядом")
     else:
@@ -28,9 +28,9 @@ def main():
     point_x = check(float(input("X: ")), 'x')
     point_y = check(float(input("Y: ")), 'y')
     radius_search = float(input("Введите радиус: "))
-    radius_coin = coinPlace(point_x, point_y)
+    radius_coin = coin_place(point_x, point_y)
     print(f"radius_coin = {radius_coin}")
-    checkCoin(radius_search, radius_coin)
+    check_coin(radius_search, radius_coin)
 
 
 main()
