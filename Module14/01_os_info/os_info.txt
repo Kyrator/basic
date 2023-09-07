@@ -1,4 +1,4 @@
 OS info is 
-uname_result(system='Windows', node='DESKTOP-O530ETO', release='10', version='10.0.19045', machine='AMD64')
+uname_result(system='Darwin', node='Mac-mini-Aleksandr.local', release='21.6.0', version='Darwin Kernel Version 21.6.0: Thu Jul  6 22:18:26 PDT 2023; root:xnu-8020.240.18.702.13~1/RELEASE_X86_64', machine='x86_64')
 
-Python version is 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] ('64bit', 'WindowsPE')
+Python version is 3.11.5 (main, Aug 24 2023, 15:23:30) [Clang 14.0.0 (clang-1400.0.29.202)] ('64bit', '')

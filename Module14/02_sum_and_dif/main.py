@@ -1,5 +1,3 @@
-# TODO здесь писать код
-
 
 def count(number):
     count_number = 0
