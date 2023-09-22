@@ -11,3 +11,4 @@ merged = merge_sorted_lists(list1, list2)
 print(merged)
 
 
+# TODO: работаем в рамках пройденного материала; set() будут позже
