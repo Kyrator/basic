@@ -29,3 +29,4 @@ for man in man_list:
             break
 
 print("\nНаибольшее кол-во людей, которые могут взять ролики: ", count_couples)
+#check 22092023
