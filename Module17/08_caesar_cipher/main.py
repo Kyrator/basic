@@ -13,3 +13,5 @@ shift = int(input('Введите сдвиг: '))
 
 output_str = caeser_cipher(input_str, shift)
 print(output_str)
+
+# TODO: зачем if sym != ' ' else ' ', когда символы, которые не в алфавите лучше оставить "как есть"?
