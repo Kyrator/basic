@@ -9,7 +9,6 @@ for i in range(len(line)):
         line_append = line[i] + str(count_letter)
         new_line.extend(line_append)
         count_letter = 1
-
     else:    
         if line[i] == line[i+1]:
             count_letter += 1
