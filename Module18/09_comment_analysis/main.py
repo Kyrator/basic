@@ -1,4 +1,13 @@
 # TODO здесь писать код
+def count_uppercase_lowercase(text_input):
+    lower = 0
+    upper = 0
+    for letter in text_input:
+        if letter.islower():
+            lower += 1
+        elif letter.isupper():
+            upper += 1
+    return upper, lower
 
 
 # Пример использования:
