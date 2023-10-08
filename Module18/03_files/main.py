@@ -5,7 +5,7 @@ if line_input.startswith(("@", "№", "$", "%", "^", "&", "*", "(", ")")):
 else:
     # TODO: в предыдущем метоже вы передали корректно несоколько аргументов
     # а что мешает повторить в методе строкой ниже тот же порядок передачи?
-    if line_input.endswith(".txt") or line_input.endswith(".docx"):
-        print("Файл назван верно.")
-    else:
+    if not line_input.endswith((".txt", ".docx")):
         print("Ошибка: неверное расширение файла. Ожидалось .txt или .docx.")
+    else:
+        print("Файл назван верно.")
