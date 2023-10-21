@@ -25,3 +25,13 @@ store = {
 }
 
 # TODO здесь писать код
+
+for title, sku in goods.items():
+    for article, stuff in store.items():
+        if sku == article:
+            total_sku = 0
+            count_sku = 0
+            for i_stuff in stuff:
+                total_sku += (i_stuff['quantity'] * i_stuff['price'])
+                count_sku += i_stuff['quantity']
+            print(f"{title} — {count_sku} штук, стоимость {total_sku} рубля")
