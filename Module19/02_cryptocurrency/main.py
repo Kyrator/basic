@@ -46,3 +46,30 @@ data = {
 
 
 # TODO здесь писать код
+# Напишите программу, которая выполняет следующий алгоритм действий:
+#
+# Вывести списки ключей и значений словаря.
+for data_keys, data_values in data.items():
+    print("data_keys:", data_keys, "data_values:", data_values)
+print()
+
+# В “ETH” добавить ключ “total_diff” со значением 100.
+data['ETH']['total_diff'] = 100
+print("data['ETH']['total_diff'] =", data['ETH']['total_diff'])
+print()
+
+# Внутри “fst_token_info” значение ключа “name” поменять с “fdf” на “doge”.
+print("data['tokens'][0]['fst_token_info']['name'] =", data['tokens'][0]['fst_token_info']['name'] )
+data['tokens'][0]['fst_token_info']['name'] = "doge"
+print("data['tokens'][0]['fst_token_info']['name'] =", data['tokens'][0]['fst_token_info']['name'] )
+print()
+
+# Удалить total_out из словарей внутри списка tokens и присвоить сумму этих значений в totalOut внутри ETH.
+print("data['ETH']['total_out'] =", data['ETH']["total_out"])
+data['ETH']["total_out"] += int(data['tokens'][0].pop('total_out')) + int(data['tokens'][1].pop('total_out'))
+print("data['ETH']['total_out'] =", data['ETH']["total_out"])
+print()
+
+# Внутри "sec_token_info" изменить название ключа “price” на “total_price”.
+data['tokens'][1]['sec_token_info']['total_price'] = data['tokens'][1]['sec_token_info'].pop('price')
+print("data['tokens'][1]['sec_token_info']['total_price'] =", data['tokens'][1]['sec_token_info']['total_price'])
