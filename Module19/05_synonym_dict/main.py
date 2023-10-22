@@ -44,10 +44,12 @@ def requst_words(number):
     number += 1
     if 1 <= number <= 20 or number % 10 == 0:
         number_needs = single_number[number]
-    else:
+    elif 21 <= number <= 109:
         number_second = number % 10
         number_first = number - number_second
         number_needs = couple_number[number_first] + " " + single_number[number_second]
+    else:
+        number_needs = str(number)
     return number_needs
 
 
