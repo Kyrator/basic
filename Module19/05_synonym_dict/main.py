@@ -1,4 +1,7 @@
 # TODO здесь писать код
+
+
+# Проверка слова в словаре
 def request_word():
     word_request = input("Введите слово: ").lower().title()
     synonym_request = ''
@@ -15,12 +18,12 @@ def request_word():
         not_exist_word()
     return synonym_request
 
-
+# Если слова нет в словаре
 def not_exist_word():
     print("Такого слова в словаре нет.")
     request_word()
 
-
+# Функция для корректного создания вопроса при запросе слов
 def requst_words(number):
     single_number = {
         1: 'первая', 2: 'вторая', 3: 'третья',
@@ -52,7 +55,7 @@ library_dict = dict()
 i_count_couple = 0
 count_couple = int(input("Введите количество пар слов: "))
 while i_count_couple < count_couple:
-    line = input(f"{requst_words(i_count_couple).title()} пара: ").split(" — ")
+    line = input(f"{requst_words(i_count_couple).title()} пара: ").split(" — ") # Разделение строки через символ указанный в примере
     if len(line) == 2:
         library_dict[line[0]] = line[1]
         i_count_couple += 1
