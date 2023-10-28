@@ -23,7 +23,7 @@ def not_exist_word():
     print("Такого слова в словаре нет.")
     request_word()
 
-# Функция для корректного создания вопроса при запросе слов
+# Функция для корректного создания вопроса при запросе слов -- useless, trash code
 def requst_words(number):
     single_number = {
         1: 'первая', 2: 'вторая', 3: 'третья',
@@ -66,3 +66,6 @@ while i_count_couple < count_couple:
         print("Попробуйте заново")
 
 request_word()
+
+# TODO: synonym_0: synonym_1, synonym_1: synonym_0
+# .get() -- решите в одно обращение задачу поиска
