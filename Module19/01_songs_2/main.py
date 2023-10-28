@@ -10,7 +10,7 @@ violator_songs = {
     'Clean': 5.83
 }
 
-# TODO здесь писать код
+# TODO здесь писать код -- вообще бесполезная штука
 question_songs = {
     1: "первой",
     2: "второй",
@@ -24,7 +24,7 @@ question_songs = {
 }
 
 how_mach_songs = int(input("Сколько песен выбрать? "))
-play_list = []
+play_list = [] -- и зачем вам допсписок?
 for i_song in range(how_mach_songs):
     sing = (input("Название {number} песни: ".format(number=question_songs[i_song + 1])))
     sing_length = violator_songs.get(sing, 0)
