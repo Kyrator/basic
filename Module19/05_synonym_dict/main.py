@@ -34,4 +34,4 @@ while i_count_couple <= count_couple:
 request_word()
 
 # TODO: synonym_0: synonym_1, synonym_1: synonym_0
-# .get() -- решите в одно обращение задачу поиска
+# .get() -- решите в одно обращение задачу поиска 
