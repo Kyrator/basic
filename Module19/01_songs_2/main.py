@@ -14,6 +14,7 @@ violator_songs = {
 total_play_list = 0
 how_mach_songs = int(input("Сколько песен выбрать? "))
 for i_song in range(how_mach_songs):
+    # TODO: это явно не одна строка =)
     sing = (input("Название {number} песни: ".format(number=(i_song + 1))))
     total_play_list += violator_songs.get(sing, 0)
 
