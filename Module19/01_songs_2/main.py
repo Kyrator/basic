@@ -10,12 +10,13 @@ violator_songs = {
     'Clean': 5.83
 }
 
-# TODO здесь писать код -- вообще бесполезная штука
 total_play_list = 0
 how_mach_songs = int(input("Сколько песен выбрать? "))
 for i_song in range(how_mach_songs):
-    # TODO: это явно не одна строка =)
     sing = (input("Название {number} песни: ".format(number=(i_song + 1))))
-    total_play_list += violator_songs.get(sing, 0)
+    if violator_songs.get(sing):
+        total_play_list += violator_songs.get(sing, 0)
+    else:
+        print("Такой песни в плейлисте нет")
 
-print("Общее время звучания песен: {length} минуты".format(length=total_play_list))
+print(f"Общее время звучания песен: {round(total_play_list, 2)} минуты")
