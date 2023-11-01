@@ -14,10 +14,6 @@ total_play_list = 0
 how_mach_songs = int(input("Сколько песен выбрать? "))
 for i_song in range(how_mach_songs):
     sing = (input("Название {number} песни: ".format(number=(i_song + 1))))
-    # TODO: так все же зачем два обращения к словарю? достаточно одного будет
-    if violator_songs.get(sing):
-        total_play_list += violator_songs.get(sing, 0)
-    else:
-        print("Такой песни в плейлисте нет")
+    total_play_list += violator_songs.get(sing, 0)
 
 print(f"Общее время звучания песен: {round(total_play_list, 2)} минуты")
