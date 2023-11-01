@@ -13,8 +13,5 @@ for i_count_couple in range(1, count_couple + 1):
 while True:
     word_request = input("Введите слово: ").title()
     # TODO: здесь тоже будет достаточно одного обращения к словарю
-    if library_dict.get(word_request):
-        print(library_dict.get(word_request))
-        break
-    else:
-        print("Такого слова в словаре нет.")
+    print(library_dict.get(word_request,"Такого слова в словаре нет."))
+
