@@ -44,20 +44,20 @@ students = {
 # TODO исправить код
 
 def find_interest(students_dict):
-  interest_list_find = set()
-  surname_string_find = ''
-  for student in students_dict.values():
-    interest_list_find.update(student['interests'])
-    surname_string_find += student['surname']
-  length_surname_find = len(surname_string_find)
+    interest_list_find = set()
+    surname_string_find = ''
+    for student in students_dict.values():
+        interest_list_find.update(student['interests'])
+        surname_string_find += student['surname']
+    length_surname_find = len(surname_string_find)
 
-  return interest_list_find, length_surname_find
+    return interest_list_find, length_surname_find
 
 
-print("Список пар «ID студента — возраст»:", [(id, student['age']) for id, student in students.items()])
+print("Список пар «ID студента — возраст»:", [(id_stud, student['age']) for id_stud, student in students.items()])
 
 interest_list, length_surname = find_interest(students)
 
-print("Полный список интересов всех студентов:",interest_list)
+print("Полный список интересов всех студентов:", interest_list)
 
 print("Общая длина всех фамилий студентов:", length_surname)
