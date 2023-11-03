@@ -20,12 +20,11 @@ def find_key(dictionary, key, depth_find=None):
         if key in dictionary:
             return dictionary[key]
 
-        for value_dict_without_depth in dictionary.values():
-            if isinstance(value_dict_without_depth, dict):
-                item = find_key(value_dict_without_depth, key)
+        for value_dict_with_depth in dictionary.values():
+            if isinstance(value_dict_with_depth, dict):
+                item = find_key(value_dict_with_depth, key, depth_find)
                 if item:
                     return item
-
     elif depth_find > 0:
         if key in dictionary:
             return dictionary[key]
@@ -35,7 +34,6 @@ def find_key(dictionary, key, depth_find=None):
                 item = find_key(value_dict_with_depth, key, depth_find - 1)
                 if item:
                     return item
-
     else:
         return None
 
@@ -44,6 +42,6 @@ find_value = input("Введите искомый ключ: ")
 question = input("Хотите ввести максимальную глубину? Y/N: ").lower()
 if question == "y":
     depth = int(input("Введите максимальную глубину: "))
-    print(find_key(site, find_value, depth))
+    print("Значение ключа:", find_key(site, find_value, depth))
 elif question == "n":
-    print(find_key(site, find_value))
+    print("Значение ключа:", find_key(site, find_value))
