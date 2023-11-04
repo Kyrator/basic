@@ -34,3 +34,5 @@ for i_count in range(1, count_site + 1):
     brand = input("Введите название продукта для нового сайта: ")
     new_site = print_site(site, brand)
     print("Сайт для {brand}: \n{new_site}".format(brand=brand, new_site=new_site))
+
+# TODO: а где глубокое копирование?
