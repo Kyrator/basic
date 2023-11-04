@@ -5,7 +5,7 @@ def sum_data(*args):
     for value in args:
         if isinstance(value, (dict, list)):
             summa_data += sum_data(*value)
-        else:
+        else: # TODO: здесь бы на числа проверить
             summa_data += value
     return summa_data
 
