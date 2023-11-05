@@ -1,3 +1,5 @@
+import copy
+
 site = {
     'html': {
         'head': {
@@ -29,10 +31,23 @@ def print_site(context, device):
     return context
 
 
+def print_deep(site_deep, depth=0):
+    for key, value in site_deep.items():
+        print('\t' * depth, ("<" + key + ">"))
+        if isinstance(value, dict):
+            print_deep(value, depth + 1)
+            print('\t' * depth, ("</" + key + ">"))
+        else:
+            print('\t' * (depth + 1), ''.join(value))
+            print('\t' * depth, ("</" + key + ">"))
+
 count_site = int(input("Сколько сайтов: "))
-for i_count in range(1, count_site + 1):
+for _ in range(count_site):
     brand = input("Введите название продукта для нового сайта: ")
-    new_site = print_site(site, brand)
-    print("Сайт для {brand}: \n{new_site}".format(brand=brand, new_site=new_site))
+    site_copy = copy.deepcopy(site)
+    new_site = print_site(site_copy, brand)
+    # print(id(site), id(new_site))
+    print("Сайт для {brand}:".format(brand=brand))
+    print_deep(new_site)
 
 # TODO: а где глубокое копирование?
