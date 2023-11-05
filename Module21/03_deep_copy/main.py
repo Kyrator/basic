@@ -41,6 +41,7 @@ def print_deep(site_deep, depth=0):
             print('\t' * (depth + 1), ''.join(value))
             print('\t' * depth, ("</" + key + ">"))
 
+
 count_site = int(input("Сколько сайтов: "))
 for _ in range(count_site):
     brand = input("Введите название продукта для нового сайта: ")
