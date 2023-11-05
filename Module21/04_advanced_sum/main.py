@@ -5,12 +5,12 @@ def sum_data(*args):
     for value in args:
         if isinstance(value, (dict, list)):
             summa_data += sum_data(*value)
-        else: # TODO: здесь бы на числа проверить
+        elif isinstance(value, (int, float)):
             summa_data += value
     return summa_data
 
 
-summa1 = sum_data([[1, 2, [3]], [1], 3])
+summa1 = sum_data([[1, 2.44, [3]], [1], 3])
 print("Ответ в консоли: {summa}".format(summa=summa1))
 
 summa2 = sum_data(1, 2, 3, 4, 5)
