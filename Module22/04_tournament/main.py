@@ -44,3 +44,4 @@ print("Содержимое файла second_tour.txt:")
 for i_file in file_input:
     print(i_file, end='')
     info.append((str(i_file)).strip())
+file_input.close()
