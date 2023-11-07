@@ -4,10 +4,9 @@ import zipfile
 
 
 def unzip(archive):
-    zfile = zipfile.ZipFile(archive, 'r')
-    for i_file_name in zfile.namelist():
-        zfile.extract(i_file_name)
-    zfile.close()
+    with zipfile.ZipFile(archive, 'r') as zfile:
+        for i_file_name in zfile.namelist():
+            zfile.extract(i_file_name)
 
 
 def collect_stats(file_name_collect):
@@ -15,15 +14,13 @@ def collect_stats(file_name_collect):
     if file_name_collect.endswith('.zip'):
         unzip(file_name_collect)
         file_name_collect = ''.join((file_name_collect[:-3], 'txt'))
-    text_file = open(file_name_collect, 'r', encoding='UTF-8')
-    for i_line in text_file:
-        for j_char in i_line:
-            if j_char.isalpha():
-                if j_char not in rezult:
-                    rezult[j_char] = 0
-                rezult[j_char] += 1
-    text_file.close()
-
+    with open(file_name_collect, 'r', encoding='UTF-8') as text_file:
+        for i_line in text_file:
+            for j_char in i_line:
+                if j_char.isalpha():
+                    if j_char not in rezult:
+                        rezult[j_char] = 0
+                    rezult[j_char] += 1
     return rezult
 
 
