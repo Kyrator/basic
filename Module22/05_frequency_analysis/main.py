@@ -20,28 +20,26 @@ def count_letter_eng(text_func):
 
 context = "Mama myla ramu."
 
-file_input = open('text.txt', 'w')
-file_input.write(context)
-file_input.close()
+with open('text.txt', 'w') as file_input:
+    file_input.write(context)
 
-file_input = open('text.txt', 'r')
-print("Содержимое файла text.txt:")
-text = file_input.read()
-print(text)
-context_dict = count_letter_eng(text)
-file_input.close()
+
+with open('text.txt', 'r') as file_input:
+    print("Содержимое файла text.txt:")
+    text = file_input.read()
+    print(text)
+    context_dict = count_letter_eng(text)
 
 print()
-file_output = open('analysis.txt', 'w')
-for key_letter, value_letter in sorted(context_dict.items(), reverse=True):
-    for value in sorted(value_letter):
-        file_output.write("{letter} {statistic}\n"
-                          .format(letter=value, statistic=round(key_letter, 4)))
 
-file_output.close()
+with open('analysis.txt', 'w') as file_output:
+    for key_letter, value_letter in sorted(context_dict.items(), reverse=True):
+        for value in sorted(value_letter):
+            file_output.write("{letter} {statistic}\n"
+                              .format(letter=value, statistic=round(key_letter, 4)))
 
-file_output = open('analysis.txt', 'r')
-print("Содержимое файла analysis.txt:")
-for i_file in file_output:
-    print(i_file, end='')
-file_output.close()
+
+with open('analysis.txt', 'r') as file_output:
+    print("Содержимое файла analysis.txt:")
+    for i_file in file_output:
+        print(i_file, end='')
