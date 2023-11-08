@@ -38,12 +38,12 @@ with open('registrations_bad.log', 'w') as registrations_bad:
     for i_error_list in error_list:
         registrations_bad.write(str(i_error_list) + '\n')
 
-with open('registrations_bad.log', 'w') as registrations_bad:
+with open('registrations_bad.log', 'r') as registrations_bad:
     print("Содержимое файла registrations_bad.log:")
     for i_error_list in error_list:
         print(i_error_list)
 print()
-with open('registrations_good.log', 'w') as registrations_good:
+with open('registrations_good.log', 'r') as registrations_good:
     print("Содержимое файла registrations_good.log:")
     for i_right_list in right_list:
        print(i_right_list)
