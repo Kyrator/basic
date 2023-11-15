@@ -8,6 +8,9 @@ class Fighter:
         self.name = "Воин {}".format(self.index)
         self.health = 100
 
+# TODO: методы класса должны быть в классе; например, дать в нос, все еще жив
+# внешний код должен организовать "битву"
+
 
 class Ring:
     status_battle = True
