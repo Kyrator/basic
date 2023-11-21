@@ -7,7 +7,7 @@ class Stack:
     def push(self, task):
         self.__lst_task.append(task)
 
-    def pop(self, task):
+    def pop(self):
         if len(self.__lst_task) == 0:
             return None
         self.__lst_task.pop()
@@ -26,8 +26,6 @@ class TaskManager:
             self.dct_task[key] = Stack()
         self.dct_task[key].push(task)
 
-
-
     def __str__(self):
         response = []
         if self.dct_task:
@@ -36,9 +34,8 @@ class TaskManager:
                     key=key,
                     value=self.dct_task[key]
                 )
-            )
+                )
         return ''.join(response)
-
 
 
 manager = TaskManager()
