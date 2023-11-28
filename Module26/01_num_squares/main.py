@@ -8,12 +8,12 @@ class Squares:
     Генерирует последовательность из квадратов чисел от 1 до N
     """
 
-    def __init__(self, n):
+    def __init__(self, n: int):
         self.__n = n
         self.__count = 0
 
     @property
-    def __iter__(self) -> Iterable[int]:
+    def __iter__(self) -> int:
         return self.__n
 
     def __next__(self) -> int:
@@ -21,7 +21,7 @@ class Squares:
         return self.__count ** 2
 
 
-def squares(n) -> int:
+def squares(n: int) -> Iterable[int]:
     """
     Функция-генератор.
     Генерирует последовательность из квадратов чисел от 1 до N
@@ -30,7 +30,7 @@ def squares(n) -> int:
         yield i ** 2
 
 
-def square_numbers(n):
+def square_numbers(n: int) -> Iterable[int]:
     """
     Генераторное выражение.
     Генерирует последовательность из квадратов чисел от 1 до N
