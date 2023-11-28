@@ -14,11 +14,11 @@ class Node:
 
 
 class LinkedList:
-    def __init__(self):
+    def __init__(self) -> None:
         self.head: Optional[Node] = None
         self.length = 0
 
-    def __str__(self):
+    def __str__(self) -> str:
         if self.head is not None:
             current = self.head
             values = [str(current.value)]
@@ -29,6 +29,7 @@ class LinkedList:
         return 'LinkedList []'
 
     def append(self, elem: Any) -> None:
+        """Добавление элемента в список"""
         new_node = Node(elem)
         if self.head is None:
             self.head = new_node
@@ -39,7 +40,8 @@ class LinkedList:
         last.next = new_node
         self.length += 1
 
-    def get(self, index):
+    def get(self, index: int) -> Any:
+        """Получение элемента по индексу в списке"""
         if not 0 <= index <= self.length:
             raise IndexError("Ошибка получения элемента по индексу!!! Выход за пределы массива")
         current = self.head
@@ -47,7 +49,8 @@ class LinkedList:
             current = current.next
         return current.value
 
-    def remove(self, index):
+    def remove(self, index: int) -> None:
+        """Удаление элемента в списке"""
         cur_node = self.head
         cur_index = 0
         if self.length == 0 or self.length < index:
