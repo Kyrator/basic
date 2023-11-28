@@ -1,9 +1,8 @@
 # TODO здесь писать код
-
 import os
 
 
-def gen_files_path(path):
+def gen_files_path(path: str) -> None:
     """
     Функция рекурсивно проходит по
     всем каталогам указанной директории
