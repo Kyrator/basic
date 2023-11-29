@@ -35,3 +35,6 @@ try:
         raise FileNotFoundError('Нет такой директории')
 except FileNotFoundError as exc:
     print(exc)
+
+# TODO: код упал
+TypeError: Too many arguments for typing.List; actual 2, expected 1
