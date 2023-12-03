@@ -13,8 +13,8 @@ def slower(func: Callable) -> None:
         декорируемой функции ждёт
         несколько секунд.
         """
-        print("ждём несколько секунд")
-        time.sleep(1)
+        print("ждём две секунды")
+        time.sleep(2)
         func()
 
     return wrapper
