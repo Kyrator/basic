@@ -23,7 +23,7 @@ def counter(func: Callable) -> Callable:
 
 
 @counter
-def test():
+def test() -> None:
     print("test")
 
 
