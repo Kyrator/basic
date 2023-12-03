@@ -7,14 +7,14 @@ def slower(func: Callable) -> None:
     """ Декоратор """
 
     @functools.wraps(func)
-    def wrapper() :
+    def wrapper():
         """
         Обертка, которая перед выполнением
         декорируемой функции ждёт
         несколько секунд.
         """
         print("ждём несколько секунд")
-        time.sleep(3)
+        time.sleep(1)
         func()
 
     return wrapper
