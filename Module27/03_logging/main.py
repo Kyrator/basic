@@ -45,7 +45,7 @@ def say_goodbye() -> str:
     return "Goodbye My Lover!"
 
 
-count = 1
+count = 0
 while count < 10:
     print(say_hello())
     print(say_goodbye())
