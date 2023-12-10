@@ -1,7 +1,7 @@
 import math
 from abc import ABC
 
-
+# TODO: некорректно используете абстракт
 class MyMath(ABC):
     """Абстрактный класс MyMath"""
 
