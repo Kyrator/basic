@@ -1,4 +1,15 @@
 # TODO здесь писать код
+from collections import Counter
+
+
+def count_unique_characters(line: str) -> int:
+    """ Функция принимает строчку,
+  переводит в нижний регистр,
+  получает словарь символов,
+  отфильтровывает количество значения которые равны единице
+  и возвращает
+  """
+    return sum(filter(lambda x: x == 1, (Counter(line.lower()).values())))
 
 
 # Пример использования:
