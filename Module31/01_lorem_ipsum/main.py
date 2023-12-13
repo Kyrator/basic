@@ -10,3 +10,5 @@ Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, v
 
 
 print([w for w in re.findall(r'\w+', text) if len(w) == 4])
+
+# TODO: мв не считаем в принтах
