@@ -9,6 +9,6 @@ Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, v
 # TODO здесь писать код
 
 
-print([w for w in re.findall(r'\w+', text) if len(w) == 4])
-
+result = [w for w in re.findall(r'\w+', text) if len(w) == 4]
+print(result)
 # TODO: мв не считаем в принтах
